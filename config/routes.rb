@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'collections#index'
   resources :collections
   resources :albums
+  resources :items
 end
