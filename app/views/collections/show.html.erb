@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @collection.name %>
-</p>
+<h1 class="text-center">
+  <strong><%= @collection.name %></strong>
+</h1>
 
-<%= link_to 'Edit', edit_collection_path(@collection) %> |
-<%= link_to 'Back', collections_path %>
+<p style="font-size: 18px">
+  <%= link_to 'Editar', edit_collection_path(@collection) %> |
+  <%= link_to 'Voltar', collections_path %>
+</p>
