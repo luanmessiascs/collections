@@ -2,14 +2,10 @@
 
 <h1 class="text-center">Suas Coleções</h1>
 
-<div class="container w-50 border border-dark rounded">
+<div class="container w-50">
     <% @collections.each do |collection| %>
         <p class="text-center" style="font-size: 18px">
           <%= link_to collection.name, collection %>
-          <%= link_to 'Editar', edit_collection_path(collection), class: 'link-warning', 
-          style: "margin: 10px" %>
-          <%= link_to 'Deletar', collection, method: :delete, class: 'link-danger',
-          data: { confirm: 'Você tem certeza que deseja Deletar?' } %>
         </p>
     <% end %>
 

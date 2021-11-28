@@ -1,10 +1,12 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="text-center"><%= notice %></p>
 
 <h1 class="text-center">
   <strong><%= @collection.name %></strong>
 </h1>
 
 <p style="font-size: 18px">
-  <%= link_to 'Editar', edit_collection_path(@collection) %> |
-  <%= link_to 'Voltar', collections_path %>
+  <%= link_to 'Editar', edit_collection_path(@collection), class: 'btn btn-warning' %>
+  <%= link_to 'Deletar', @collection, method: :delete,
+  data: { confirm: 'Você tem certeza que deseja Deletar?' }, class: 'btn btn-danger' %>
+  <%= link_to 'Voltar', collections_path, class: 'btn btn-primary' %>
 </p>
