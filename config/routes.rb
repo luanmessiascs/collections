@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'collections#index'
-  resources :collections
-  resources :albums
-  resources :items
+  resources :collections do
+    resources :albums do
+      resources :items
+    end
+  end
 end
