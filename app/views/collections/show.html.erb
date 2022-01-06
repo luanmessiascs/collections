@@ -10,4 +10,4 @@
   data: { confirm: 'Você tem certeza que deseja Deletar?' }, class: 'btn btn-danger' %>
   <%= link_to 'Voltar', collections_path, class: 'btn btn-primary' %>
 </p>
-<p><%= link_to 'Álbuns', collection_album_path, class: 'btn btn-info' %></p>
+<p><%= link_to 'Álbuns', collection_albums_path(@collection), class: 'btn btn-info' %></p>

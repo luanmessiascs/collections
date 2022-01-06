@@ -4,7 +4,7 @@ class CreateAlbums < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :poster
       t.text :description
-      t.refences :collection, null: false, forein_key: true
+      t.references :collection, null: false, forein_key: true
 
       t.timestamps
     end

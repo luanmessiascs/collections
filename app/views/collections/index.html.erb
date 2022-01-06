@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center">Suas Coleções</h1>
+<div class="container border border-dark w-75">
+  <h1 class="text-center">Suas Coleções</h1>
 
-<div class="container w-50">
-    <% @collections.each do |collection| %>
-        <p class="text-center" style="font-size: 18px">
-          <%= link_to collection.name, collection %>
-        </p>
-    <% end %>
+  <div class="container w-50">
+      <% @collections.each do |collection| %>
+          <p class="text-center" style="font-size: 18px">
+            <%= link_to collection.name, collection %>
+          </p>
+      <% end %>
 
-    <br>
-    <%= link_to 'Nova Coleção', new_collection_path %>
+      <br>
+      <%= link_to 'Nova Coleção', new_collection_path %>
+  </div>
 </div>
