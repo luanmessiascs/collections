@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2021_09_16_165612) do
     t.string "title"
     t.string "poster"
     t.text "description"
+    t.integer "collection_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["collection_id"], name: "index_albums_on_collection_id"
   end
 
   create_table "collections", force: :cascade do |t|

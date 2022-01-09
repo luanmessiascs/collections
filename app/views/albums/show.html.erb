@@ -1,19 +1,13 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="text-center"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @album.title %>
+<h1 class="text-center">
+  <strong><%= @collection.name %></strong>
+</h1>
+
+<p style="font-size: 18px">
+  <%= link_to 'Editar', edit_collection_path(@collection), class: 'btn btn-warning' %>
+  <%= link_to 'Deletar', @collection, method: :delete,
+  data: { confirm: 'Você tem certeza que deseja Deletar?' }, class: 'btn btn-danger' %>
+  <%= link_to 'Voltar', collections_path, class: 'btn btn-primary' %>
 </p>
-
-<p>
-  <strong>Poster:</strong>
-  <%= @album.poster %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @album.description %>
-</p>
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<p><%= link_to 'Álbuns', collection_albums_path(@collection), class: 'btn btn-info' %></p>

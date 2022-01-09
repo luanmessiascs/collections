@@ -3,7 +3,8 @@ class AlbumsController < ApplicationController
 
   # GET /albums or /albums.json
   def index
-    @albums = Album.all
+    @collection = Collection.find(params[:collection_id])
+    @albums = @collection.albums
   end
 
   # GET /albums/1 or /albums/1.json
@@ -12,7 +13,8 @@ class AlbumsController < ApplicationController
 
   # GET /albums/new
   def new
-    @album = Album.new
+    @collection = Collection.find(params[:collection_id])
+    @album = @collection.albums.new
   end
 
   # GET /albums/1/edit
@@ -21,7 +23,8 @@ class AlbumsController < ApplicationController
 
   # POST /albums or /albums.json
   def create
-    @album = Album.new(album_params)
+    @collection = Collection.find(params[:collection_id])
+    @album = @collection.albums.create(album_params)
 
     respond_to do |format|
       if @album.save
