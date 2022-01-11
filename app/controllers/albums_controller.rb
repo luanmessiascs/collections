@@ -9,6 +9,8 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1 or /albums/1.json
   def show
+    @collection = Collection.find(params[:collection_id])
+    @album = @collection.albums.find(params[:id])
   end
 
   # GET /albums/new
@@ -28,7 +30,8 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to @album, notice: "Album was successfully created." }
+        format.html { redirect_to collection_album_path(@collection, @album),
+        notice: "Album was successfully created." }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new, status: :unprocessable_entity }

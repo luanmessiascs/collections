@@ -1,11 +1,11 @@
 <div style="padding-top: 10px" class="container border border-dark w-50 rounded">
     <%= form_with(model: [@collection, @collection.albums.build]) do |form| %>
-      <% if collection.errors.any? %>
+      <% if album.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+          <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
 
           <ul>
-            <% collection.errors.each do |error| %>
+            <% album.errors.each do |error| %>
               <li><%= error.full_message %></li>
             <% end %>
           </ul>
@@ -13,8 +13,13 @@
       <% end %>
 
       <div style="padding-bottom: 10px" class="field">
-        <%= form.label :name, "Nome" %>
-        <%= form.text_field :name %>
+        <p><%= form.label :title, "Título" %></p>
+        <p><%= form.text_field :title %></p>
+      </div>
+
+      <div class="field">
+        <p><%= form.label :description, "Descrição" %></p>
+        <p><%= form.text_area :description, cols: 57, rows: 4 %>
       </div>
 
       <div class="actions">
@@ -23,5 +28,5 @@
     <% end %>
 
     <br>
-    <%= link_to 'Voltar', collections_path %>
+    <%= link_to 'Voltar', collection_albums_path %>
 </div>

@@ -4,12 +4,13 @@
 <div style="padding-top: 4px" class="container border border-dark w-75">
   <h1 class="text-center">Seus Álbuns</h1>
 
-  <div class="container w-50">
-      <%= @collection.albums.each do |album| %>
-        <p><%= @albums %></p>
+  <div style="padding-bottom: 2px" class="container w-50">
+      <% @collection.albums.each do |album| %>
+        <p><%= album.title %></p>
       <% end %>
 
       <br>
-      <%= link_to 'Novo Álbum', new_collection_album_path %>
+      <%= link_to 'Novo Álbum', new_collection_album_path, class: 'btn btn-primary' %>
+      <%= link_to 'Voltar a coleção', @collection, class: 'btn btn-light' %>
   </div>
 </div>

@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2021_09_16_165612) do
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
-    t.string "poster"
     t.text "description"
     t.integer "collection_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -30,10 +29,12 @@ ActiveRecord::Schema.define(version: 2021_09_16_165612) do
 
   create_table "items", force: :cascade do |t|
     t.string "title"
-    t.string "poster"
     t.text "description"
+    t.integer "album_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id"], name: "index_items_on_album_id"
   end
 
+  add_foreign_key "items", "albums"
 end

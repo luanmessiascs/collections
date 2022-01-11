@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container border border-dark w-75">
+<div class="container border border-dark w-75 bg-light rounded">
   <h1 class="text-center">Suas Coleções</h1>
 
   <div class="container w-50">
       <% @collections.each do |collection| %>
           <p class="text-center" style="font-size: 18px">
-            <%= link_to collection.name, collection %>
+            <%= link_to collection.name, collection, class: 'link-dark' %>
           </p>
       <% end %>
 

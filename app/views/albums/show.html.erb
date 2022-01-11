@@ -1,13 +1,23 @@
 <p id="notice" class="text-center"><%= notice %></p>
 
+
 <h1 class="text-center">
-  <strong><%= @collection.name %></strong>
+  <strong><%= @album.title %></strong>
 </h1>
+
+<p style="text-indent: 15px; font-size: 18px">
+  <%= @album.description %>
+</p>
+
+<div class="container">
+  <% @album.items.each do |item| %>
+    <p class="text-center"><%= item.title %></p>
+  <% end %>
+</div>
 
 <p style="font-size: 18px">
   <%= link_to 'Editar', edit_collection_path(@collection), class: 'btn btn-warning' %>
   <%= link_to 'Deletar', @collection, method: :delete,
   data: { confirm: 'Você tem certeza que deseja Deletar?' }, class: 'btn btn-danger' %>
-  <%= link_to 'Voltar', collections_path, class: 'btn btn-primary' %>
+  <%= link_to 'Voltar', collection_path(@collection), class: 'btn btn-primary' %>
 </p>
-<p><%= link_to 'Álbuns', collection_albums_path(@collection), class: 'btn btn-info' %></p>
