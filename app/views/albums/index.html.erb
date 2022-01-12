@@ -5,8 +5,9 @@
   <h1 class="text-center">Seus Álbuns</h1>
 
   <div style="padding-bottom: 2px" class="container w-50">
-      <% @collection.albums.each do |album| %>
-        <p><%= album.title %></p>
+      <% @albums.each do |album| %>
+        <p class="text-center"><%= link_to album.title, collection_album_path(@collection, album),
+        class: 'link-dark' %></p>
       <% end %>
 
       <br>

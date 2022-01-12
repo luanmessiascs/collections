@@ -1,32 +1,32 @@
-<%= form_with(model: item) do |form| %>
-  <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<div style="padding-top: 10px" class="container bg-secondary border border-dark w-50 rounded">
+    <%= form_with(model: [@collection, @album, @album.items.build]) do |form| %>
+      <% if item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-      <ul>
-        <% item.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% item.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+      <div style="padding-bottom: 10px" class="field">
+        <p><%= form.label :title, "Título" %></p>
+        <p><%= form.text_field :title %></p>
+      </div>
 
-  <div class="field">
-    <%= form.label :poster %>
-    <%= form.text_field :poster %>
-  </div>
+      <div style="padding-bottom: 10px" class="field">
+        <p><%= form.label :description, "Descrição" %></p>
+        <p><%= form.text_area :description, cols: 57, rows: 4 %></p>
+      </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <br>
+    <%= link_to 'Voltar', collection_album_path(@collection, @album) %>
+</div>

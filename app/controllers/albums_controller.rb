@@ -21,6 +21,8 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1/edit
   def edit
+    @collection = Collection.find(params[:collection_id])
+    @album = @collection.albums.find(params[:id])
   end
 
   # POST /albums or /albums.json
@@ -30,8 +32,8 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to collection_album_path(@collection, @album),
-        notice: "Album was successfully created." }
+        format.html { redirect_to collection_albums_url,
+        notice: "Álbum criado com sucesso." }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -55,9 +57,13 @@ class AlbumsController < ApplicationController
 
   # DELETE /albums/1 or /albums/1.json
   def destroy
+    @collection = Collection.find(params[:collection_id])
+    @album = @collection.albums.find(params[:id])
     @album.destroy
+
     respond_to do |format|
-      format.html { redirect_to albums_url, notice: "Album was successfully destroyed." }
+      format.html { redirect_to collection_albums_url,
+      notice: "Album deletado com sucesso." }
       format.json { head :no_content }
     end
   end
@@ -65,7 +71,7 @@ class AlbumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_album
-      @album = Album.find(params[:id])
+      @album = Collection.find(params[:collection_id]).albums.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

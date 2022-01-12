@@ -10,6 +10,7 @@ import "channels"
 import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js"
 
 import "../../assets/images/bg.jpeg"
+import "../../assets/images/logo.jpeg"
 
 Rails.start()
 Turbolinks.start()
