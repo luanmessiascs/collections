@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
+<h1 style="font-weight: bold" class="text-center">Coleção <%= @collection.name %></h1>
 
-<h1 class="text-center">Coleção <%= @collection.name %></h1>
-<div style="padding-top: 4px" class="container border border-dark w-75">
+<div style="margin-bottom: 10px; padding-top: 4px; padding-bottom: 4px"
+class="container border border-dark w-75 bg-light">
+  
   <h1 class="text-center">Seus Álbuns</h1>
 
   <div style="padding-bottom: 2px" class="container w-50">
       <% @albums.each do |album| %>
-        <p class="text-center"><%= link_to album.title, collection_album_path(@collection, album),
-        class: 'link-dark' %></p>
+        <p class="text-center"><%= link_to album.title,
+        collection_album_path(@collection, album), class: 'link-dark' %></p>
       <% end %>
 
       <br>
-      <%= link_to 'Novo Álbum', new_collection_album_path, class: 'btn btn-primary' %>
-      <%= link_to 'Voltar a coleção', @collection, class: 'btn btn-light' %>
+      <%= link_to 'Novo Álbum', new_collection_album_path, class: 'btn btn-link' %>
+      <%= link_to 'Voltar a coleção', @collection, class: 'btn btn-primary' %>
   </div>
 </div>

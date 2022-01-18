@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div style="margin-bottom: 10px; padding-bottom: 4px"
+class="container border border-dark w-75 bg-light rounded">
 
-<div class="container border border-dark w-75 bg-light rounded">
   <h1 class="text-center">Suas Coleções</h1>
 
-  <div class="container w-50">
+  <div style="padding-bottom: 2px" class="container w-50">
       <% @collections.each do |collection| %>
           <p class="text-center" style="font-size: 18px">
             <%= link_to collection.name, collection, class: 'link-dark' %>
@@ -11,6 +11,6 @@
       <% end %>
 
       <br>
-      <%= link_to 'Nova Coleção', new_collection_path %>
+      <%= link_to 'Nova Coleção', new_collection_path, class: 'btn btn-link' %>
   </div>
 </div>

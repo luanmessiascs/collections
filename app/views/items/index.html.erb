@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<h1 style="font-weight: bold" class="text-center">Álbum <%= @album.title %></h1>
 
 <div class="container border border-dark w-75 bg-light rounded">
   <h1 class="text-center">Itens</h1>
@@ -12,8 +12,8 @@
       <% end %>
 
       <br>
-      <%= link_to 'Novo Item', new_collection_path, class: 'btn btn-primary' %>
+      <%= link_to 'Novo Item', new_collection_album_item_path, class: 'btn btn-link' %>
       <%= link_to 'Voltar ao Álbum', collection_album_path(@collection, @album),
-      class: 'btn btn-link' %>
+      class: 'btn btn-primary' %>
   </div>
 </div>

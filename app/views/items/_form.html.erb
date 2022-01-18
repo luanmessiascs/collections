@@ -1,5 +1,5 @@
 <div style="padding-top: 10px" class="container bg-secondary border border-dark w-50 rounded">
-    <%= form_with(model: [@collection, @album, @album.items.build]) do |form| %>
+    <%= form_with(model: [@collection, @album, item]) do |form| %>
       <% if item.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -28,5 +28,5 @@
     <% end %>
 
     <br>
-    <%= link_to 'Voltar', collection_album_path(@collection, @album) %>
+    <%= link_to 'Voltar', collection_album_items_path %>
 </div>

@@ -1,5 +1,5 @@
-<div style="padding-top: 10px" class="container border border-dark w-50 rounded">
-    <%= form_with(model: [@collection, @collection.albums.build]) do |form| %>
+<div style="padding-top: 10px" class="container bg-secondary border border-dark w-50 rounded">
+    <%= form_with(model: [@collection, album]) do |form| %>
       <% if album.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
