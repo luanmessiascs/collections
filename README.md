@@ -20,4 +20,7 @@ bem, visando isso, nosso aplicativo, é um aplicativo Web,
 construido na Linguagem Ruby, via framework Ruby on Rails!
 
 Para dar ínicio a usabilidade do programa, você deve:
-...
+
+* Instalar o Ruby (versão 3.0.1)
+* Instalar o Ruby on Rails (6.0.1.1)
+* Instalar <a href="nodejs.org>Node.js</a> (16.13.0)
