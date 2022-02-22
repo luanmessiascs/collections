@@ -33,4 +33,4 @@ Felizmente, já fizemos a maior parte desse trabalho para você,
 O Felipe (designer e programador mobile), criou um instalador
 que funciona da mesma forma que outros programas no Windows,
 então você não precisa se preocupar com a maior parte deste processo.
-Qualquer problema, relatar em:
+Qualquer problema, relatar em: ![Issue] ("/issue")
