@@ -21,8 +21,9 @@ construido na Linguagem Ruby, via framework Ruby on Rails!
 
 Para dar ínicio a usabilidade do programa, você deve:
 
-* Instalar o Ruby (versão 3.0.1)
-* Instalar o <a href="https://rubyinstaller.org">Ruby on Rails</a> (6.0.1.1)
+* Instalar o <a href="https://rubyinstaller.org">Ruby</a> (versão 3.0.1)
+* Instalar o Ruby on Rails (6.0.1.1)
+	```gem install rails```
 * Instalar o <a href="https://nodejs.org">Node.js</a> (16.13.0)
 * Geralmente o npm já vem instalado com Node.js por padrão,
 mas caso não venha, você deve instala-lo usando:
