@@ -1,4 +1,5 @@
-# <h1>Collections <img width="60" src="./app/assets/images/logo.jpeg"></h1>
+# <h1>Collections
+<img style="margin-top: 10px" width="60" src="./app/assets/images/logo.jpeg"></h1>
 
 Olá Pessoas que se interessaram em saber
 o porque deste repositório no Github.
