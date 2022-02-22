@@ -26,4 +26,5 @@ Para dar ínicio a usabilidade do programa, você deve:
 * Instalar o <a href="https://nodejs.org">Node.js</a> (16.13.0)
 * Geralmente o npm já vem instalado com Node.js por padrão,
 mas caso não venha, você deve instala-lo usando:
-	yard add npm
+
+	yarn add npm
