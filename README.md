@@ -10,10 +10,9 @@ eu e meus colegas ficamos responsáveis por fazer
 um projeto, de conclusão do nosso curso de informática,
 cada um com suas responsabilidades, a descrição
 completa do projeto pode ser encontrada em:
-<a href="https://colethaton.blogspot.com">
+<a href="https://coletathon.blogspot.com">
 	Coletathon no BlogSpot
-</a>
-, lá, vocês vão saber um pouco sobre quem nós somos
+</a>, lá, vocês vão saber um pouco sobre quem nós somos
 e o trabalho que tivemos. O meu nome é Luan Messias
 e como vocês podem ver, este é o nosso projeto, o Collections.
 O projeto Collections é um projeto voltado as pessoas
