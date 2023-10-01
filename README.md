@@ -1,7 +1,7 @@
 # Collections
 <img width="100" src="./app/assets/images/logo.jpeg">
 
-Olá Pessoas que se interessaram em saber
+Olá a todos que se interessaram em saber
 o porque deste repositório no Github.
 
 Primeiro queria lhes dizer, o porque deste
